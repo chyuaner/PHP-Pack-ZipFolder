@@ -4,11 +4,6 @@
 // 要壓縮的資料夾
 $the_folder = "sample_file";
 
-// 暫時建立壓縮檔在伺服器上的檔名
-$zip_file_name = "TempZip.zip";
-//$zip_file_name = time().".zip";
-
-
 // -----------以下為不建議修改的部份-----------
 require_once("FlxZipArchive.php");
 
@@ -16,6 +11,9 @@ require_once("FlxZipArchive.php");
 $requestURLArray = explode("/",$_SERVER['REQUEST_URI']);
 $requestLastURL = explode("?",end($requestURLArray));
 $requestFileName = $requestLastURL[0];
+
+// 暫時建立壓縮檔在伺服器上的檔名
+$zip_file_name = "TempZipPack".time().rand(10000, 99999).".zip";
 
 // 伺服器有裝 zip -PHP Extension的話
 if(extension_loaded('zip'))
