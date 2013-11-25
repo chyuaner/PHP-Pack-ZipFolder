@@ -8,7 +8,8 @@ PHP 當場壓縮並下載
     * Github Source: <https://gist.github.com/ninadsp/6098467>
 
 ## 注意
-* 非apache上，可能造成只有<http://localhost/DownloadZip.php>有效
+* 請在apache上，將本站的conf設定成 `AllowOverride All` ， 不然可能造成只有<http://localhost/DownloadZip.php>有效
+
 * 伺服器上必須有 zip - PHP Extension
     * 可參考 [Linux 中安裝 php-zip 模組 -小灰狼php筆記](http://phpwolf.blogspot.tw/2012/04/linux-php-zip.html)
 * 伺服器必需要開啟檔案寫入才能正常運作
